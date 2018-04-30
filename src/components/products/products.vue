@@ -131,4 +131,19 @@ export default {
 </script>
 
 <style lang="css">
+  .page-link {
+    color: #007bff !important;
+  }
+  .btn-outline-success {
+    color: #28a745;
+    background-color: transparent;
+    background-image: none;
+    border-color: #28a745 !important;
+  }
+  .btn-outline-primary {
+    color: #007bff;
+    background-color: transparent;
+    background-image: none;
+    border-color: #007bff !important;
+  }
 </style>
