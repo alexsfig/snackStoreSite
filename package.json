@@ -1,8 +1,8 @@
 {
-  "name": "insense",
+  "name": "SNACK_Store",
   "version": "1.0.0",
   "description": "Snack StoreApp",
-  "author": "Alex Navarro <walter.navarro@proximity-software.com>",
+  "author": "alexander sosa",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
