@@ -20,9 +20,14 @@ Vue.use(Router)
       component: Error404
     },
     {
-      path: '/products',
+      path: '/',
       component: ProductsTemplate,
       children:[
+        {
+          path: 'products',
+          name: 'Products',
+          component: Products
+        },
         {
           path: '',
           name: 'Products',
