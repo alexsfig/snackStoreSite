@@ -23,6 +23,7 @@ export default {
   likeProduct(context, id){
     HTTP.post('/users/products/' + id + '/like')
     .then((resp) => {
+      context.$toasted.success('Thanks for your like').goAway(2000)
       context.product = resp.data
 
     })

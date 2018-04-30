@@ -94,6 +94,9 @@ export default {
       this.previousPage = Number(val.current_page) - 1
       this.nextPage = Number(val.current_page) + 1
       console.log(val)
+    },
+    product: function(val, oldVal) {
+      productsController.index(this)
     }
   },
   methods: {
