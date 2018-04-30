@@ -57,9 +57,9 @@
           <nav aria-label="Page navigation example">
             <ul class="pagination  justify-content-center">
 
-              <li class="page-item" ><a class="page-link" :class="products.current_page == 1 ? 'disabled': ''" href="javascript:void(0)" v-on:click="loadPreviousProducts">&laquo;</a></li>
+              <li class="page-item" :class="products.current_page == 1 ? 'disabled': ''"><a class="page-link"  href="javascript:void(0)" v-on:click="loadPreviousProducts">&laquo;</a></li>
               <li class="page-item" v-for="index in products.pages" :class="index == products.current_page? 'disabled': ''"><a class="page-link" href="javascript:void(0)" v-on:click="loadProducts(index)">{{ index }}</a></li>
-              <li class="page-item"><a class="page-link" href="javascript:void(0)" :class="products.pages == products.current_page? 'disabled': ''" v-on:click="loadNextProducts">&raquo;</a></li>
+              <li class="page-item" :class="products.pages == products.current_page? 'disabled': ''"><a class="page-link" href="javascript:void(0)"  v-on:click="loadNextProducts">&raquo;</a></li>
             </ul>
           </nav>
         </div>
@@ -145,5 +145,8 @@ export default {
     background-color: transparent;
     background-image: none;
     border-color: #007bff !important;
+  }
+  .page-item.disabled .page-link {
+    color: #6c757d !important;
   }
 </style>
