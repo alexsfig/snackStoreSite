@@ -40,7 +40,7 @@
 
 	            <div class="row">
 	                <div class="col-xs-12 text-right">
-	                    <button type="submit" name="action" class="btn btn-primary btn-flat">Iniciar Sesión</button>
+	                    <button type="submit" name="action" class="btn btn-primary btn-flat">Login</button>
 	                </div>
 	            </div>
 	        </form>

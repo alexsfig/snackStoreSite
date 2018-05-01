@@ -86,10 +86,10 @@ Vue.filter('formatDateTime', function(value) {
 })
 
 // Merge the locales.
-Validator.localize('es', esp);
+// Validator.localize('es', esp);
 
 const config = {
-    locale: 'es'
+    locale: 'en'
 };
 
 Vue.use(VeeValidate, config);
