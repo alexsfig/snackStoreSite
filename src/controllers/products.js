@@ -11,13 +11,18 @@ const products = 'products'
 
 export default {
   index(context){
+    context.loading = true
+    context.loading = true
     HTTP.get(products + '/' + context.page + '/' + context.orderByColumn + '/' + context.orderBy)
     .then((resp) => {
       context.products = resp.data
+      context.loading = false
 
     })
     .catch((err) => {
       console.log(err)
+      context.loading = false
+      
     })
   },
   likeProduct(context, id){

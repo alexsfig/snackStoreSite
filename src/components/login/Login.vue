@@ -1,7 +1,7 @@
 <template>
 	<div class="login-box">
 	    <div class="login-logo">
-	        <div class="col-md-2 offset-5">
+	        <div class="col-md-4 offset-md-4 col-sm-4 offset-sm-4">
 	        	<!-- <img src="../../assets/images/logo.png" alt=""> -->
 	        	<img src="../../assets/images/logo2.png" alt="" class="img-fluid">
 	        </div>
@@ -17,13 +17,13 @@
 	    <div class="login-box-body">
 	        <p class="login-box-msg">
 	        	<h3 class="text-center">
-	        		Inicio de Sesión
+	        		Login
 	        	</h3>
 	        </p>
 
 	        <form @submit.prevent="validateBeforeSubmit">
 	            <div class="form-group has-feedback" :class="{'has-error': errors.has('email') }">
-	                <input id="email" name="email" v-model="email" v-validate="'required'" type="text" placeholder="Usuario" class="form-control">
+	                <input id="email" name="email" v-model="email" v-validate="'required'" type="text" placeholder="Email" class="form-control">
 	                <span class="glyphicon glyphicon-user form-control-feedback" :class="{'has-error': errors.has('email') }"></span>
 	                <span class="help-block" v-show="errors.has('email')" for="email" v-bind:data-error="errors.first('email')">
 	                    {{ errors.first('email') }}
@@ -31,7 +31,7 @@
 	            </div>
 
 	            <div class="form-group has-feedback" :class="{'has-error': errors.has('password') }">
-	                <input name="password" v-model="password" v-validate="'required|min:6'" type="password" placeholder="Contraseña" class="form-control">
+	                <input name="password" v-model="password" v-validate="'required|min:6'" type="password" placeholder="Password" class="form-control">
 	                <span class="glyphicon glyphicon-lock form-control-feedback" :class="{'has-error': errors.has('password') }"></span>
 	                 <span v-show="errors.has('password')" for="password" v-bind:data-error="errors.first('password')">
 	                    {{ errors.first('password') }}

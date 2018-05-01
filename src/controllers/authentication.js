@@ -14,13 +14,12 @@ export default {
     */
     authenticate(context, params){
         context.showAlert = false;
-
-        console.log(params)
         HTTP.post(LOGIN_URL, params )
         .then((resp) => {
-            // Use localStorage to save access token, to use in each request
-            localStorage.setItem('authorization', resp.data.token)
-            window.location.replace(process.env.BASE_ROUTE +'/products');
+          // Use localStorage to save access token, to use in each request
+          localStorage.setItem('authorization', resp.data.token)
+          context.$toasted.success('Successful Login').goAway(2000)
+          window.location.replace(process.env.BASE_ROUTE +'/products');
         })
         .catch((err) => {
             context.showAlert = true;
@@ -28,8 +27,11 @@ export default {
         })
     },
     signOut(context){
-        //context.$router.push({name: 'Login'})
-        window.location.replace(process.env.BASE_ROUTE + '/login');
+      localStorage.removeItem('authorization');
+      localStorage.clear()
+      context.localStorage = localStorage
+      context.$toasted.success('Successful Logout').goAway(2000)
+      window.location.replace(process.env.BASE_ROUTE + '/products')
     }
 
 }
